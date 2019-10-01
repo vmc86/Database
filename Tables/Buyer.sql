@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Buyer]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[Title] NVARCHAR(200),
+	[Adress] NVARCHAR(200) NULL,
+	[Phone] NVARCHAR(20) NULL,
+	[CountryId] INT NULL,
+	FOREIGN KEY ([CountryId]) REFERENCES Country(Id)
+)
