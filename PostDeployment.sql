@@ -9,6 +9,7 @@
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
+USE [Sklad]
 
 INSERT INTO Categories (Title) VALUES 
 (N'Пиво'), --слабо

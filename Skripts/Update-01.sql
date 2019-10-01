@@ -1,4 +1,6 @@
-﻿SELECT * FROM Products; --отобразить все продукты
+﻿USE [Sklad]
+
+SELECT * FROM Products; --отобразить все продукты
 
 UPDATE --обновить
 Products -- в таблице
