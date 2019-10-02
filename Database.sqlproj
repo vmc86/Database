@@ -80,5 +80,6 @@
   <ItemGroup>
     <None Include="Skripts\Select-01.sql" />
     <None Include="JoinExamples\Join-01.sql" />
+    <None Include="Skripts\Delete -01.sql" />
   </ItemGroup>
 </Project>
