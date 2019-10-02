@@ -2,7 +2,7 @@
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
 	[BuyerId] INT NOT NULL,
-	[ProductId] INT NULL,
+	[ProductId] INT NOT NULL,
 	[Quantity] INT NOT NULL DEFAULT(0),
 	[PriceBuy] DECIMAL(10,2),
 	[DateBuy] DATE,
