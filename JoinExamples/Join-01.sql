@@ -136,6 +136,7 @@ FULL JOIN Sectors s
 ON s.Id = e.SectorId;
 */
 
+-- Вызов скалярной функции
 
 DECLARE @TEMP INT;
 SELECT @TEMP = dbo.QuantityToDate('10.09.2019', N'Пиво');

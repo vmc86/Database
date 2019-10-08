@@ -1,4 +1,7 @@
-﻿CREATE FUNCTION [dbo].[QuantityToDate]
+﻿
+-- Скалярные функции --
+
+CREATE FUNCTION [dbo].[QuantityToDate]
 (
 	@DATE DATE,
 	@CATEGORY_TITLE NVARCHAR(30)
