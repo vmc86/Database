@@ -71,6 +71,7 @@
     <Build Include="Tables\Manager.sql" />
     <Build Include="Tables\Saler.sql" />
     <Build Include="Tables\Buyer.sql" />
+    <Build Include="QuantityToDate.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />

@@ -59,6 +59,24 @@ AND
 ) AS 'Остаток на складе'
 
 
+SELECT dbo.QuantityToDate('15.09.2019', N'Вино');
+
+/* 4. Найти количество товара определенной категории на конкретный момент времени */
+--ОСТАТОК на скдаде через UNION
+SELECT SUM([Quantity]) AS Total
+FROM (
+(SELECT Quantity FROM
+[Buy] WHERE [Buy].[ProductId] IN (SELECT pc.ProductId FROM ProductCategories AS [pc]  WHERE CategoryId =
+(SELECT c.Id FROM Categories AS c WHERE Title LIKE N'Пиво'))
+AND [DateBuy] <= '10.09.2019')
+UNION ALL
+(SELECT Quantity * -1 FROM
+[Sale] WHERE [Sale].[ProductId] IN (SELECT pc.ProductId FROM ProductCategories AS [pc]  WHERE CategoryId =
+(SELECT c.Id FROM Categories AS c WHERE Title LIKE N'Пиво'))
+AND [DateSale] <= '10.09.2019') 
+) AS T;
+
+
 /* 4. Найти количество товара определенной категории на конкретный момент времени */
 --ОСТАТОК на скдаде
 SELECT	
@@ -79,6 +97,7 @@ WHERE [s].[ProductId] IN
 (SELECT c.Id FROM Categories AS c WHERE Title LIKE N'Пиво'))
 AND [s].[DateSale] <= '10.09.2019'
 ) AS 'Остаток на складе'
+
 
 /*Дата поставки - товар - сумма*/
 SELECT	[b].[DateBuy] AS 'Дата поставки'
@@ -116,3 +135,8 @@ SELECT *, 'FULL JOIN' FROM Employers e
 FULL JOIN Sectors s 
 ON s.Id = e.SectorId;
 */
+
+
+DECLARE @TEMP INT;
+SELECT @TEMP = dbo.QuantityToDate('10.09.2019', N'Пиво');
+PRINT CONCAT('Total: ', @TEMP, ' items');
