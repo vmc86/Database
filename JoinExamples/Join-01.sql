@@ -141,3 +141,38 @@ ON s.Id = e.SectorId;
 DECLARE @TEMP INT;
 SELECT @TEMP = dbo.QuantityToDate('10.09.2019', N'Пиво');
 PRINT CONCAT('Total: ', @TEMP, ' items');
+
+--Заполнение продажи товара через процедуру
+DECLARE @TEMP1 INT;
+EXEC @TEMP1 = dbo.[Transaction_Sale]
+@SalerId = 4
+,@ProductId = 1
+,@Quantity = 18
+,@PriceSale = '57.24'
+,@DateSale = '20.09.2019'
+,@ManagerId = 1
+PRINT IDENT_CURRENT('Sale') + 1;
+PRINT @TEMP1;
+--проверка остатка на складе после продажи
+DECLARE @CurrentDate DATE = GETDATE(),
+ @ProductId INT = 1,
+ @CurrentQuantity INT = 0
+SELECT @CurrentQuantity = [dbo].[QuntityOnSklad](@CurrentDate, @ProductId) ;
+PRINT @CurrentQuantity;;
+
+--покупаем товары через процедуру
+DECLARE @TEMP2 INT
+EXEC @TEMP2 = dbo.[Transaction_Buy]
+4
+,1
+,100
+,'57.24'
+,'20.09.2019'
+,1
+PRINT IDENT_CURRENT('Buy') + 1;
+PRINT @TEMP2;
+
+--баланс на счету
+DECLARE @cv DECIMAL(10,2)
+EXEC @cv = [dbo].[CurrentBalance]
+PRINT @cv

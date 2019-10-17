@@ -60,6 +60,8 @@
     <Folder Include="Skripts" />
     <Folder Include="Task" />
     <Folder Include="JoinExamples" />
+    <Folder Include="Functions" />
+    <Folder Include="Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Categories.sql" />
@@ -71,7 +73,12 @@
     <Build Include="Tables\Manager.sql" />
     <Build Include="Tables\Saler.sql" />
     <Build Include="Tables\Buyer.sql" />
-    <Build Include="QuantityToDate.sql" />
+    <Build Include="Tables\CashFlow.sql" />
+    <Build Include="Functions\CurrentBalance.sql" />
+    <Build Include="Functions\QuntityOnSklad.sql" />
+    <Build Include="Procedures\Transaction_Buy.sql" />
+    <Build Include="Procedures\Transaction_Sale.sql" />
+    <Build Include="Functions\QuantityToDate.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />

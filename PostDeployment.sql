@@ -1332,8 +1332,10 @@ INSERT INTO Buy (BuyerId, ProductId, Quantity, PriceBuy, DateBuy, ManagerId) VAL
 ,(N'47', N'42', N'163', N'146.12', N'30.09.2019', N'2')
 ,(N'47', N'42', N'65', N'138.24', N'07.09.2019', N'1')
 ,(N'48', N'8', N'233', N'37.90', N'07.09.2019', N'3')
-
 ;
+
+
+
 
 INSERT INTO Sale(SalerId, ProductId, Quantity, PriceSale, DateSale, ManagerId) VALUES
 (N'4', N'1', N'22', N'57.24', N'18.09.2019', N'1')
@@ -1506,22 +1508,23 @@ INSERT INTO Sale(SalerId, ProductId, Quantity, PriceSale, DateSale, ManagerId) V
 ,(N'4', N'83', N'26', N'158.61', N'17.09.2019', N'2')
 ,(N'5', N'84', N'25', N'184.83', N'24.09.2019', N'1')
 ,(N'1', N'85', N'16', N'590.85', N'07.09.2019', N'4')
-
 ;
 
-/**/
+--Добавляем запись в таблицу CashFlow
+--стартовый капитал 100000грн
+INSERT INTO CashFlow(Cash, DateTranzaction) VALUES 
+(100000.00, N'01.09.2019')
 
-/*
-INSERT INTO Sectors (Title, Phone) 
-VALUES
-(N'Sales',N'555-091'),
-(N'HR', N'555-092'),
-(N'Managment', N'555-093');
+--Осуществляем закупку товара через вызов 
+--процедуры с транзакцией
+EXEC dbo.[Transaction_Buy]
+47, 42, 65, 138.24, N'17.09.2019', 1
+EXEC dbo.[Transaction_Buy]
+48, 8, 233, 37.90, N'17.09.2019', 3
 
-INSERT INTO Employers(FirstName, LastName, MiddleName, SectorId) 
-VALUES
-(N'Иванов',N'Иван',N'Иванович', (SELECT Id FROM Sectors WHERE Title = N'Managment')),
-(N'Петров',N'Петр',N'Петрович', (SELECT Id FROM Sectors WHERE Title = N'HR')),
-(N'Сидоров',N'Сидор',N'Сидорыч', (SELECT Id FROM Sectors WHERE Title = N'HR')),
-(N'Пупкин',N'Пупка',N'Пупыч', NULL);
-*/
+--Осуществляем продажу товара через вызов 
+--процедуры с транзакцией
+EXEC dbo.[Transaction_Sale]
+4, 1, 22, 57.24, N'18.09.2019', 1
+EXEC dbo.[Transaction_Sale]
+10, 2, 22, 19.72, N'12.09.2019', 4

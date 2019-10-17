@@ -21,6 +21,11 @@ SELECT * FROM ProductCategories; -- отобразить все продукты
 SELECT * FROM Products; --отобразить все продукты
 SELECT * FROM Sale;
 SELECT * FROM Saler;
+SELECT * FROM CashFlow;
+
+
+SELECT SUM(Cash) FROM CashFlow 
+	WHERE DateTranzaction <= GETDATE();
 
 /*
 SELECT SUM(Quantity) FROM Products; -- SUM сумма

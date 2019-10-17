@@ -1,7 +1,5 @@
 ﻿USE [Sklad]
 
-SELECT * FROM Products; --отобразить все продукты
-
 UPDATE --обновить
 Products -- в таблице
 SET Title = N'BALTIKA-999' --что сделать с полями
@@ -23,7 +21,3 @@ WHERE Quantity > 30;
 
 UPDATE Sale SET PriceSale = 30.12
 WHERE PriceSale > 100.01;
-
-SELECT * FROM Products;
-
-SELECT * FROM Sale;
