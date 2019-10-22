@@ -62,6 +62,7 @@
     <Folder Include="JoinExamples" />
     <Folder Include="Functions" />
     <Folder Include="Procedures" />
+    <Folder Include="Triggers" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Categories.sql" />
@@ -79,7 +80,10 @@
     <Build Include="Procedures\Transaction_Buy.sql" />
     <Build Include="Procedures\Transaction_Sale.sql" />
     <Build Include="Functions\QuantityToDate.sql" />
-    <Build Include="Task\Trigger1.sql" />
+    <Build Include="Tables\Log.sql" />
+    <Build Include="Triggers\InsertToCashFlow.sql" />
+    <Build Include="Triggers\DeleteFromCashFlow.sql" />
+    <Build Include="Triggers\UpdateInCashFlow.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />
