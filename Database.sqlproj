@@ -79,6 +79,7 @@
     <Build Include="Procedures\Transaction_Buy.sql" />
     <Build Include="Procedures\Transaction_Sale.sql" />
     <Build Include="Functions\QuantityToDate.sql" />
+    <Build Include="Task\Trigger1.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />
