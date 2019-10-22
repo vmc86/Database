@@ -1,5 +1,5 @@
 ﻿CREATE TRIGGER [Trigger1]
-	ON [dbo].[SomeTableOrView]
+	ON [dbo].[Sale]
 	FOR DELETE, INSERT, UPDATE
 	AS
 	BEGIN
