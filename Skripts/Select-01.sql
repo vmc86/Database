@@ -26,38 +26,3 @@ SELECT * FROM CashFlow;
 
 SELECT SUM(Cash) FROM CashFlow 
 	WHERE DateTranzaction <= GETDATE();
-
-/*
-SELECT SUM(Quantity) FROM Products; -- SUM сумма
-
-SELECT COUNT(Id) FROM Products WHERE Quantity =3; --COUNT количество
-
-SELECT COUNT(Id) FROM Products; --COUNT количество
-
-SELECT 
-CONCAT(Title, ' code: ', Sku) AS N'Full name',
-Title,
-Sku
-FROM Products;
-
-
-SELECT * FROM Products p
-JOIN 
-ProductCategories pc
-ON p.Id = pc.ProductId
-JOIN
-Categories c
-ON c.Id = pc.CategoryId;
-
---все продукты категории Слабоалк
-SELECT p.* FROM Products p
-JOIN 
-ProductCategories pc
-ON p.Id = pc.ProductId
-JOIN
-Categories c
-ON c.Id = pc.CategoryId
-WHERE c.Id = 4;
-
-
-*/

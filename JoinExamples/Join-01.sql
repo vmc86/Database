@@ -174,5 +174,5 @@ PRINT @TEMP2;
 
 --баланс на счету
 DECLARE @cv DECIMAL(10,2)
-EXEC @cv = [dbo].[CurrentBalance]
+SELECT @cv = [dbo].[CurrentBalance](NULL)
 PRINT @cv

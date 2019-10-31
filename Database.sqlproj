@@ -63,6 +63,7 @@
     <Folder Include="Functions" />
     <Folder Include="Procedures" />
     <Folder Include="Triggers" />
+    <Folder Include="Views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Categories.sql" />
@@ -84,6 +85,10 @@
     <Build Include="Triggers\InsertToCashFlow.sql" />
     <Build Include="Triggers\DeleteFromCashFlow.sql" />
     <Build Include="Triggers\UpdateInCashFlow.sql" />
+    <Build Include="Views\SaleView.sql" />
+    <Build Include="Views\BuyView.sql" />
+    <Build Include="Views\SaleAfter5000.sql" />
+    <Build Include="Views\BuyOnLastWeek.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />
@@ -95,5 +100,6 @@
     <None Include="JoinExamples\Join-01.sql" />
     <None Include="Skripts\Delete -01.sql" />
     <None Include="Skripts\DateSelect.sql" />
+    <None Include="Skripts\SelectFromViews.sql" />
   </ItemGroup>
 </Project>
