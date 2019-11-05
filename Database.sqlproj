@@ -101,5 +101,6 @@
     <None Include="Skripts\Delete -01.sql" />
     <None Include="Skripts\DateSelect.sql" />
     <None Include="Skripts\SelectFromViews.sql" />
+    <None Include="Skripts\Backup.sql" />
   </ItemGroup>
 </Project>
