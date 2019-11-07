@@ -89,6 +89,9 @@
     <Build Include="Views\BuyView.sql" />
     <Build Include="Views\SaleAfter5000.sql" />
     <Build Include="Views\BuyOnLastWeek.sql" />
+    <Build Include="Tables\Task.sql" />
+    <Build Include="Tables\GeterTable.sql" />
+    <Build Include="Procedures\getRandomTask.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />
@@ -102,5 +105,6 @@
     <None Include="Skripts\DateSelect.sql" />
     <None Include="Skripts\SelectFromViews.sql" />
     <None Include="Skripts\Backup.sql" />
+    <None Include="Skripts\Select_UNIQUE_ID.sql" />
   </ItemGroup>
 </Project>

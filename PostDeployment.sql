@@ -1528,3 +1528,11 @@ EXEC dbo.[Transaction_Sale]
 4, 1, 22, 57.24, N'18.10.2019', 1
 EXEC dbo.[Transaction_Sale]
 10, 2, 22, 19.72, N'12.10.2019', 4
+
+INSERT INTO Task (SomeData) VALUES
+('10.10.2019')
+,('12.10.2019')
+,('14.10.2019')
+,('16.10.2019')
+,('18.10.2019')
+;

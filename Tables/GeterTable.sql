@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[GeterTable]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[GetId] INT UNIQUE
+)

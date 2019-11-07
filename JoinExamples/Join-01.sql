@@ -176,3 +176,7 @@ PRINT @TEMP2;
 DECLARE @cv DECIMAL(10,2)
 SELECT @cv = [dbo].[CurrentBalance](NULL)
 PRINT @cv
+
+DECLARE @GetId INT
+SELECT TOP(1) @GetId =  Id FROM Task ORDER BY NEWID()
+PRINT @GetId
