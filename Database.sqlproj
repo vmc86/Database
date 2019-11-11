@@ -64,6 +64,7 @@
     <Folder Include="Procedures" />
     <Folder Include="Triggers" />
     <Folder Include="Views" />
+    <Folder Include="Cert" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Categories.sql" />
@@ -106,5 +107,7 @@
     <None Include="Skripts\SelectFromViews.sql" />
     <None Include="Skripts\Backup.sql" />
     <None Include="Skripts\Select_UNIQUE_ID.sql" />
+    <None Include="Cert\CreateSert.sql" />
+    <None Include="Skripts\BackUpWithCripting.sql" />
   </ItemGroup>
 </Project>
