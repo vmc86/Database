@@ -65,6 +65,7 @@
     <Folder Include="Triggers" />
     <Folder Include="Views" />
     <Folder Include="Cert" />
+    <Folder Include="Indexes" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Categories.sql" />
@@ -109,5 +110,6 @@
     <None Include="Skripts\Select_UNIQUE_ID.sql" />
     <None Include="Cert\CreateSert.sql" />
     <None Include="Skripts\BackUpWithCripting.sql" />
+    <None Include="Indexes\CreateIndexes.sql" />
   </ItemGroup>
 </Project>
